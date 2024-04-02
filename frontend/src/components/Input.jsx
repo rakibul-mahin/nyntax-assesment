@@ -24,14 +24,23 @@ const Input = ({ label, mandatory, placeholder, icon, stacked }) => {
         {mandatory && <span className="text-red">*</span>}
       </label>
       <div className="relative flex flex-col justify-center items-center">
-        <input
-          placeholder={placeholder}
-          className={`border border-light-bg rounded-md ${
-            stacked ? "w-[300px]" : "w-[202px]"
-          } h-[40px] p-[6px]`}
-          readOnly
-          value={selectedDateTime ? selectedDateTime.toString() : ""}
-        />
+        {icon ? (
+          <input
+            placeholder={placeholder}
+            className={`border border-light-bg rounded-md ${
+              stacked ? "w-[300px]" : "w-[202px]"
+            } h-[40px] p-[6px]`}
+            readOnly
+            value={selectedDateTime ? selectedDateTime.toString() : ""}
+          />
+        ) : (
+          <input
+            placeholder={placeholder}
+            className={`border border-light-bg rounded-md ${
+              stacked ? "w-[300px]" : "w-[202px]"
+            } h-[40px] p-[6px]`}
+          />
+        )}
         {icon && (
           <CiCalendar
             className="ml-[245px] w-[18px] h-[18px] absolute cursor-pointer"

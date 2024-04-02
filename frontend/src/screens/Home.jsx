@@ -1,11 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../components/Button";
 import ReservationDetails from "../components/ReservationDetails";
 import CustomerInformation from "../components/CustomerInformation";
 import ChargesSummary from "../components/ChargesSummary";
 import VehicleInformation from "../components/VehicleInformation";
 import AdditionalCharges from "../components/AdditionalCharges";
-import Datetime from "react-datetime";
 
 const Home = () => {
   return (
